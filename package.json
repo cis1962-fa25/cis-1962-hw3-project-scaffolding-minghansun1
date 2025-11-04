@@ -1,0 +1,42 @@
+{
+  "name": "pizza-validator",
+  "version": "1.0.0",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/x6X7wJcH) TODO: Fill this out with details about how to run your app!",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "format": "prettier --write 'src/**/*.{ts,js,json,md}'",
+    "check-format": "prettier --check 'src/**/*.{ts,js,json,md}'"
+  },
+  "dependencies": {
+    "jiti": "^2.6.1",
+    "zod": "^3.25.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cis1962-fa25/cis-1962-hw3-project-scaffolding-minghansun1.git"
+  },
+  "author": "Minghan Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cis1962-fa25/cis-1962-hw3-project-scaffolding-minghansun1/issues"
+  },
+  "homepage": "https://github.com/cis1962-fa25/cis-1962-hw3-project-scaffolding-minghansun1#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/jest": "^30.0.0",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "jest": "^30.2.0",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
+  }
+}

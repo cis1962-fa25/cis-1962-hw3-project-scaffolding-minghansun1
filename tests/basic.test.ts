@@ -1,13 +1,13 @@
-import validatePizza from "../src/validation.js";
+const { validatePizza: validatePizzaFn } = require("../src/validation.ts");
 
 describe("basic", () => {
   test("fail", () => {
-    const result = validatePizza({"heheheha": true });
+    const result = validatePizzaFn({"heheheha": true });
     expect(result.isPizza).toBe(false);
   });
 
   test("pass", () => {
-  const result = validatePizza({ size: 2, crust: "normal" });
+  const result = validatePizzaFn({ size: 2, crust: "normal" });
     expect(result.isPizza).toBe(true);
     expect(result.pizza).toBeDefined();
     if (result.pizza){
@@ -17,12 +17,12 @@ describe("basic", () => {
   });
 
   test("fail_crust", () => {
-    const result = validatePizza({ size: 2, crust: "thin" });
+    const result = validatePizzaFn({ size: 2, crust: "thin" });
     expect(result.isPizza).toBe(false);
   });
 
   test("fail_toppings", () => {
-    const result = validatePizza({ size: 2, crust:"normal", toppings: ["pepperoni", "pineapple"] });
+    const result = validatePizzaFn({ size: 2, crust:"normal", toppings: ["pepperoni", "pineapple"] });
     expect(result.isPizza).toBe(false);
   });
 });

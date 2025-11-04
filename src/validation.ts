@@ -1,5 +1,5 @@
 import * as z from "zod";
-import Pizza from "./pizza.ts";
+const Pizza = require("./pizza.ts");
 
 function validatePizza(data: unknown): {
     isPizza: boolean;
@@ -15,4 +15,4 @@ function validatePizza(data: unknown): {
     return { isPizza: true, pizza: result.data };
 }
 
-export default validatePizza;
+module.exports = { validatePizza };
