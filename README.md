@@ -3,4 +3,37 @@ TODO: Fill this out with details about how to run your app!
 
 ## Usage
 
-To use this package, import it.
+To use this package, install it by providing a path to it. For example, if you're in a folder next to this package, run `npm install ../cis-1962-hw3-project-scaffolding-minghansun1`
+
+Import the `validate-pizza` function using `import { validatePizza } from "pizza-validator";`
+
+## Example
+
+```
+import { validatePizza } from "pizza-validator";
+
+const data = {
+  size: 12,
+  crust: "stuffed",
+  isDeepDish: true,
+  toppings: ["pepperoni", "pineapple"],
+};
+
+const result = validatePizza(data);
+
+if (result.isPizza && "pizza" in result) {
+  console.log("✅ Valid pizza:", result.pizza);
+} else if ("errors" in result) {
+  console.error("❌ Invalid pizza:", result.errors);
+} else {
+  console.error("❌ Unknown validation result");
+}
+```
+
+## CLI Usage
+
+Run `pizza-validator <test-file>` from the command line
+
+## Example CLI Usage
+
+`pizza-validator test-pizza.json`
