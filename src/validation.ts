@@ -1,5 +1,4 @@
 import * as z from "zod";
-const Pizza = require("./pizza.ts");
 
 function validatePizza(data: unknown): {
     isPizza: boolean;
