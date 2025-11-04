@@ -9,10 +9,13 @@ describe("basic", () => {
   test("pass", () => {
   const result = validatePizza({ size: 2, crust: "normal" });
     expect(result.isPizza).toBe(true);
-    expect(result.pizza).toBeDefined();
-    if (result.pizza){
-      expect(result.pizza.size).toBe(2);
-      expect(result.pizza.crust).toBe("normal");
+    expect(result).toHaveProperty("pizza");
+    if ("pizza" in result) {
+      expect(result.pizza).toBeDefined();
+      if (result.pizza){
+        expect(result.pizza.size).toBe(2);
+        expect(result.pizza.crust).toBe("normal");
+      }
     }
   });
 

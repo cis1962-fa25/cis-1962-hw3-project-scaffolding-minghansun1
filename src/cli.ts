@@ -20,12 +20,16 @@ try {
 
   if (!result.isPizza) {
     console.error("Invalid pizza:");
-    result.errors?.forEach((e) => console.error("  •", e));
+    if ("errors" in result) {
+      result.errors?.forEach((e: any) => console.error("  •", e));
+    }
     process.exit(1);
   }
 
   console.log("Valid pizza!");
-  console.log(JSON.stringify(result.pizza, null, 2));
+  if ("pizza" in result) {
+    console.log(JSON.stringify(result.pizza, null, 2));
+  }
 } catch (err) {
   console.error("Error:", (err as Error).message);
   process.exit(1);
