@@ -11,9 +11,9 @@ if (!filePath) {
 }
 
 try {
-    if (!fs.existsSync(filePath)) {
-        throw new Error(`File not found: ${filePath}`);
-    }
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`File not found: ${filePath}`);
+  }
 
   const json = JSON.parse(fs.readFileSync(filePath, "utf8"));
   const result = validatePizza(json);
