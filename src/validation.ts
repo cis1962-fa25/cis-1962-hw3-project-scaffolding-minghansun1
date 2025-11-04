@@ -1,11 +1,21 @@
 import * as z from "zod";
 import Pizza from "./pizza.js";
 
-function validatePizza(data: unknown): {
+interface ValidResult {
     isPizza: boolean;
-    pizza?: z.infer<typeof Pizza>;
-    errors?: z.ZodIssue[];
-} {
+    pizza: z.infer<typeof Pizza>;
+}
+
+interface InvalidResult {
+    isPizza: boolean;
+    errors: any;
+}
+
+type Response = ValidResult | InvalidResult;
+
+
+
+function validatePizza(data: unknown): Response {
     const result = Pizza.safeParse(data);
 
     if (!result.success) {
