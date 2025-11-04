@@ -1,7 +1,4 @@
-const Pizza = require("./pizza.ts");
-const validatePizza = require("./validation.ts");
+import Pizza from "./pizza";
+import validatePizza from "./validation";
 
-module.exports = {
-  Pizza,
-  validatePizza,
-};
+export { Pizza, validatePizza };

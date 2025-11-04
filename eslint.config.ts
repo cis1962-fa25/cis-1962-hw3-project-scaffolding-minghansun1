@@ -1,15 +1,15 @@
-const { defineConfig } = require("eslint/config");
-const globals = require("globals");
-const tseslint = require("typescript-eslint");
+import { defineConfig } from "eslint/config";
+import * as globals from "globals";
+import * as tseslint from "typescript-eslint";
 
-module.exports = defineConfig([
+export default defineConfig([
   ...tseslint.configs.recommended,
   {
-    files: ["**/*.{js,cjs,ts,cts}"], // dropped mjs/mts, since you're CommonJS
+    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     languageOptions: {
       parser: tseslint.parser,
       ecmaVersion: "latest",
-      sourceType: "script", // 👈 CommonJS mode, not module
+      sourceType: "module", // ES module mode
       globals: globals.node,
     },
     plugins: {
@@ -21,8 +21,8 @@ module.exports = defineConfig([
       "prefer-const": "error",
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": ["warn"],
-      "@typescript-eslint/no-var-requires": "off", // 👈 allow require()
-      "@typescript-eslint/no-require-imports": "off", // 👈 allow require()
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/no-require-imports": "on",
       "arrow-spacing": ["error", { before: true, after: true }],
       "comma-dangle": ["error", "only-multiline"],
     },

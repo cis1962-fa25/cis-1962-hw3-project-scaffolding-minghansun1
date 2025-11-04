@@ -7,4 +7,4 @@ const Pizza = z.object({
     toppings: z.array(z.enum(["pepperoni", "mushrooms", "onions", "sausage"])).optional(),
 });
 
-module.exports = Pizza;
+export default Pizza;

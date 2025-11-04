@@ -1,4 +1,5 @@
 import * as z from "zod";
+import Pizza from "./pizza";
 
 function validatePizza(data: unknown): {
     isPizza: boolean;
@@ -14,4 +15,4 @@ function validatePizza(data: unknown): {
     return { isPizza: true, pizza: result.data };
 }
 
-module.exports = { validatePizza };
+export default validatePizza;
