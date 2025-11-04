@@ -1,4 +1,4 @@
-import Pizza from "./pizza";
-import validatePizza from "./validation";
+import Pizza from "./pizza.js";
+import validatePizza from "./validation.js";
 
 export { Pizza, validatePizza };

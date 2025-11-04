@@ -1,5 +1,5 @@
 import * as z from "zod";
-import Pizza from "./pizza";
+import Pizza from "./pizza.js";
 
 function validatePizza(data: unknown): {
     isPizza: boolean;

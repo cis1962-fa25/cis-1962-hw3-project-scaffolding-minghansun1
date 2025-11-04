@@ -1,4 +1,4 @@
-import validatePizza from "./validation";
+import validatePizza from "./validation.js";
 
 const result = validatePizza({ size: 2, crust: "normal" });
 // there should be no typescript errors below

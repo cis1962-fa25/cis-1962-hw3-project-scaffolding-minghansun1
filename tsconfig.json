@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
     "target": "ES2022",
-    "rootDir": "src",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
     "esModuleInterop": true,
-    "declaration": true,
+    "skipLibCheck": true,
+    "declaration": true
   },
   "include": ["src"]
 }

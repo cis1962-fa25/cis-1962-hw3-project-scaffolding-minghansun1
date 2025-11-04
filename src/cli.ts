@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from "fs";
 import process from "process";
-import validatePizza from "./validation";
+import validatePizza from "./validation.js";
 
 const [, , filePath] = process.argv;
 
