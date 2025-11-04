@@ -6,4 +6,10 @@ export default {
   testMatch: ["**/tests/**/*.test.ts"],
   transform: {},
   extensionsToTreatAsEsm: [".ts"],
+  globals: {
+    "ts-jest": {
+      useESM: true,
+      tsconfig: "tsconfig.json",
+    },
+  },
 };

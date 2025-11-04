@@ -1,4 +1,4 @@
-import validatePizza from "../src/validation";
+import validatePizza from "../dist/validation.js";
 
 describe("basic", () => {
   test("fail", () => {
